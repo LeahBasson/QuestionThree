@@ -7,8 +7,19 @@
     box-sizing: border-box;
 }
 
+:root{
+    --primary: black;
+    --secondary: white;
+    --alternative:  #D8D9DA;
+    --neon: #1CE783;
+    --awesome: #100C08;
+    --mainBoxShadow: 0 8px 20px 10px var(--alternative);
+    --borderColor:#c4c4c4;
+    --elementShadow: .2vw .3vw .2vw #FFEBB2;
+}
+
 body{
-    font-family: Arial;
+    font-family: "Graphik Web",sans-serif;
 }
 
 .background {
@@ -38,7 +49,7 @@ body{
     z-index: 1; 
 }
 
-.login{
+.btnlogin{
  padding: 10px 23px;
  background-color: transparent;
  position: absolute;
@@ -52,10 +63,11 @@ body{
  transition: 0.5s; 
 }
 
-.login:hover{
-    background-color: #272829;
+.btnlogin:hover{
+    background-color: var(--primary);
     border-radius: 8px;
-    color: white;
+    color: var(--secondary);
+    cursor: pointer;
 }
 
 .bannerMiddle{
@@ -82,8 +94,8 @@ body{
     background-color: transparent;
 }
 
-h3{
-    color:#1CE783;
+.bannerContent h3{
+    color:var(--neon);
     font-size: 14px;
     font-weight: bold;
 }
@@ -95,19 +107,24 @@ h3{
     margin-top: 10px;
 }
 
-h2{
-    color: white;
+.bannerContent h2{
+    color: var(--secondary);
     margin: 10px;
 }
 
 .btnContent{
-    background-color: #1CE783;
+    background-color: var(--neon);
     padding: 12px 92px;
     font-weight: bold;
     border-radius: 4px;
     border: none;
     margin-top: 10px;
     font-size: 15px;
+}
+
+.btnContent:hover{
+    background-color: rgb(28, 231, 131,0.8);
+    cursor: pointer;
 }
 
 .bottomContent{
@@ -120,26 +137,28 @@ h2{
     gap: 35px;
 }
 
-.Terms{
-    color:#c4c4c4;
+.lnkTerms{
+    color: var(--borderColor);
     font-size: 12px;
     font-weight: 500;
     text-decoration: underline;
+    cursor: pointer;
 }
 
-.Sign{
+.lnkSign{
     font-size: 16px;
-    color: white;
+    color: var(--secondary);
     font-weight: 500;
     text-decoration: underline;
 }
 
-.Sign:hover{
-    color:#1CE783;
+.lnkSign:hover{
+    color: var(--neon);
+    cursor: pointer;
 }
 
-.View{
-    color: white;
+.lnkView{
+    color: var(--secondary);
     text-decoration: none;
     font-size: 12px;
     font-weight: bold;
@@ -151,13 +170,168 @@ h2{
     width: 70px;
     height: 70px;
     margin: auto;
-    color: white;
+    color: var(--secondary);
     background-color: transparent;
-    border-color: white;
+    border-color: var(--secondary);
     font-size: 25px;
+    cursor: pointer;
 }
 
 .content1{
-    height: 160px;
-    background-image: linear-gradient(#1CE783, black);
+    height: 170px;
+    background-image: linear-gradient( var(--neon), var(--awesome));
+    z-index: 0;
+    text-align: center;
+}
+
+.content1 h3{
+    color:var(--secondary);
+    z-index: 1;
+    line-height: 5;
+    font-size: 19px;
+}
+
+.content1 .btnStart{
+    padding: 13px 72px;
+    background-color: transparent;
+    border: 3px solid var(--secondary);
+    color: var(--secondary);
+    border-radius: 3px;
+    font-weight:bold;
+    font-size: 14px;
+}
+
+.btnStart:hover{
+    background-color: rgb(211, 211, 211,0.8);
+    border-color: rgb(211, 211, 211,0.2);
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.content2{
+    height: 280px;
+    background-color: var(--awesome);
+    z-index: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    width: 800px;
+    padding: 10px;
+}
+
+.text h4{
+    color: var(--neon);
+    margin-top: 60px;
+}
+
+.text h1{
+    color: var(--secondary);
+    font-size: 48px;
+    margin-top: 10px;
+}
+
+.text p{
+    color: var(--secondary);
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.cards{
+    height: 500px;
+    background-color: var(--awesome);
+    z-index: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards > div{
+    text-align: center;
+    background-color: #100C08;
+    margin: 10px;
+    width: 19%;
+    height: 450px;
+    border-radius: 6px;
+}
+
+.card{
+    position: relative;
+    background-size: cover;
+    z-index: 0;
+}
+
+.container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Adjust the last value (alpha) to change the opacity */
+    text-align: left;
+    padding: 18px;
+    line-height: 1.5;
+    color: var(--secondary);
+}
+
+.cards div:hover{
+    border: 2px solid var(--borderColor);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btmCards{
+    height: 70px;
+    background-color: var(--awesome);
+    z-index: 0;
+}
+
+.btmCards > div{
+    color: var(--borderColor);
+    font-size: 11px;
+    position: absolute;
+    right: 160px;
+}
+
+.content3{
+    height: 500px;
+    background-color: var(--awesome);
+    z-index: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnTrial{
+    padding: 14px 32px;
+    background-color: var(--neon);
+    border-radius: 4px;
+    border-color: var(--neon);
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.content3 .btmp{
+    font-size: 10px;
+    color: var(--borderColor);
+}
+
+.btmp a{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.lnkChannel{
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--secondary);
+    font-weight: bold;
+    line-height: 5;
 }
