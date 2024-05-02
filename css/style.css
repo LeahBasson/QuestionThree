@@ -15,7 +15,7 @@
     --awesome: #100C08;
     --mainBoxShadow: 0 8px 20px 10px var(--alternative);
     --borderColor:#c4c4c4;
-    --elementShadow: .2vw .3vw .2vw #FFEBB2;
+    --elementShadow: #3a3B3c;
 }
 
 body{
@@ -285,7 +285,7 @@ body{
 }
 
 .btmCards{
-    height: 70px;
+    height: 35px;
     background-color: var(--awesome);
     z-index: 0;
 }
@@ -298,7 +298,7 @@ body{
 }
 
 .content3{
-    height: 500px;
+    height: 550px;
     background-color: var(--awesome);
     z-index: 0;
     text-align: center;
@@ -334,4 +334,136 @@ body{
     color: var(--secondary);
     font-weight: bold;
     line-height: 5;
+}
+
+.content4{
+    position: relative;
+    width: 100%;
+    height: 730px;
+    background-image: url("https://leahbasson.github.io/MyImages/images/huluBackground.jpg");
+    background-size: cover;
+    z-index: 0;
+}
+
+.background-4{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust the last value (alpha) to change the opacity */
+}
+
+.liveSports{
+    background-color: transparent;
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    left: 300px;
+    top: 200px;
+}
+
+.lnkLive{
+    color: var(--secondary);
+    font-weight: bolder;
+    font-size: 13px;
+    padding: 10px;
+    border-bottom: 5px solid var(--secondary); 
+    cursor: pointer;
+}
+
+.lnkFade{
+    color: var(--secondary);
+    font-weight: bolder;
+    font-size: 13px;
+    padding: 25px;
+    opacity: 60%;
+    cursor: pointer;
+}
+
+.liveSports h1{
+    color: var(--secondary);
+    margin-top: 50px;
+    font-size: 45px;
+}
+
+.topText{
+    color: var(--secondary);
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.circles{
+    width: 350px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.liveSports img{
+    border-radius: 50%;
+    width: 50px;
+    height: 45px;
+    background-color: var(--secondary);
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.btmText {
+    color: var(--borderColor);
+    font-size: 10px;
+}
+
+.btmText a{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.content5{
+    width: 100%;
+    height: 400px;
+    background-color: var(--awesome);
+    z-index: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content5 h1{
+    color: var(--secondary);
+    font-size: 42px;
+}
+
+.content5 p{
+    color: var(--secondary);
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.ctgNav{
+    width: 280px;
+    height: 45px;
+    background-color: var(--elementShadow);
+    border-radius: 55px;
+    text-align: center;
+    line-height: 3;
+   display: flex;
+   justify-content: space-around;
+   margin-top: 40px;
+   font-size: 14px;
+}
+
+.lnkCtg-1{
+    background-color: var(--secondary);
+    border-radius: 55px ;
+    padding: 0px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.lnkCtg{
+    color: var(--secondary);
+    font-weight: bold;
+    cursor: pointer;
 }
